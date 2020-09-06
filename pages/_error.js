@@ -1,9 +1,9 @@
 
 
 const CustomError = ({
-	statusCode
+	// statusCode
 }) => {
-	console.log('pages/_error.js -> CustomError -> statusCode ->', statusCode);
+	// console.log('pages/_error.js -> CustomError -> statusCode ->', statusCode);
 	return (
 		<div>
 			This is a Custom Error
@@ -22,7 +22,7 @@ export async function getServerSideProps(
 		res
 	} = context;
 	return { props: {
-		statusCode: res ? res.statusCode : err ? err.statusCode : 404
+		// statusCode: res ? res.statusCode : err ? err.statusCode : 404
 	}};
 
 	// return {
