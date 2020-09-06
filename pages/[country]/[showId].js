@@ -84,7 +84,7 @@ export async function getServerSideProps(
 		// console.log( 'pages -> [country] -> [showId].js -> context.query', query );
 	
 		const res = await axios.get(
-			`http://api.tvmaze.com/shows/${query.showId}?embed=cast`
+			`https://api.tvmaze.com/shows/${query.showId}?embed=cast`
 		);
 		// Pass data to the page via props
 		return { props: {

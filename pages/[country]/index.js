@@ -78,7 +78,7 @@ export async function getServerSideProps(
 		console.log('Home.getServerSideProps -> context ->', context);
 		const country = context.query.country || 'us';
 		const res = await axios.get(
-			`http://api.tvmaze.com/schedule?country=${country}&date=2014-12-01`
+			`https://api.tvmaze.com/schedule?country=${country}&date=2014-12-01`
 		);
 		// Pass data to the page via props
 		return { props: {
