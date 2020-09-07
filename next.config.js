@@ -3,24 +3,17 @@ const path = require('path');
 // import path from 'path';
 
 module.exports = {
-	sassOptions: {
-		// includePaths: [path.join('components/ThumbnailWithSass/styles.scss', 'styles')],
-		// includePaths: 'components/ThumbnailWithSass/styles.scss'
-		includePaths: [path.join(
-			__dirname,
-			'styles'
-		)],
-	},
 
-	async redirects() {
-		return [
-			{
-				source: '/',
-				destination: '/us',
-				permanent: true
-			}
-		]
-	}
+
+	// async redirects() {
+	// 	return [
+	// 		{
+	// 			source: '/',
+	// 			destination: '/us',
+	// 			permanent: true
+	// 		}
+	// 	]
+	// }
 	
 }
 

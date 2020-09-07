@@ -2,8 +2,10 @@ import {
 	useRouter
 } from 'next/router';
 import {
-	useState
+	useState,
+	useEffect
 } from 'react';
+import cookies from 'nookies';
 
 const countries = [
 	{
@@ -45,6 +47,23 @@ const Header = () => {
 			}
 		)
 	}
+
+	useEffect( () => {
+		cookies.set(
+			null,		// null because no-context and we are not sending it to server, so -> null
+			'defaultCountry',	// name of that cookie
+			selectedCountry,	// value
+			{
+				maxAge: 30 * 24 * 60 * 60,
+				path: '/'
+			}
+		)
+	},
+	[
+		selectedCountry
+	]
+	);
+
 	return (
 		<div className='header'>
 			<select 
